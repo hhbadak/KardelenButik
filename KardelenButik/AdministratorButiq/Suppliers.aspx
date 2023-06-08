@@ -16,6 +16,7 @@
                         <td>Tedarikçi Şirket Adres</td>
                         <td>Tedarikçi Telefonu</td>
                         <td>Durum</td>
+                        <td>Seçenekler</td>
                     </tr>
                     <tbody>
                         <asp:PlaceHolder ID="ItemPlaceHolder" runat="server"></asp:PlaceHolder>
@@ -31,6 +32,19 @@
                     <td><%# Eval("CompanyAddress") %></td>
                     <td><%# Eval("CompanyPhoneNumber") %></td>
                     <td><span class="badge bg-success"><%# Eval("Status") %></span></td>
+                    <td>
+                        <div class="btn-group btn-group-sm">
+                            <a href="#" class="btn btn-primary">
+                                <i class="fa-solid fa-eye"></i>
+                            </a>
+                            <a href="#" class="btn btn-success">
+                                <i class="fa-solid fa-pen-to-square"></i>
+                            </a>
+                            <a href="#" class="btn btn-danger">
+                                <i class="fa-solid fa-trash"></i>
+                            </a>
+                        </div>
+                    </td>
                 </tr>
             </ItemTemplate>
         </asp:ListView>
