@@ -61,3 +61,5 @@ C:\Users\HsnHs\OneDrive\Belgeler\GitHub\KardelenButik\KardelenButik\bin\EntityFr
 C:\Users\HsnHs\OneDrive\Belgeler\GitHub\KardelenButik\KardelenButik\bin\EntityFramework.SqlServer.dll
 C:\Users\HsnHs\OneDrive\Belgeler\GitHub\KardelenButik\KardelenButik\bin\EntityFramework.xml
 C:\Users\HsnHs\OneDrive\Belgeler\GitHub\KardelenButik\KardelenButik\bin\EntityFramework.SqlServer.xml
+C:\Users\HsnHs\OneDrive\Belgeler\GitHub\KardelenButik\KardelenButik\bin\DataAccessLayer.dll
+C:\Users\HsnHs\OneDrive\Belgeler\GitHub\KardelenButik\KardelenButik\bin\DataAccessLayer.pdb

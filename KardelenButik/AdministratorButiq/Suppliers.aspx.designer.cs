@@ -15,12 +15,12 @@ namespace KardelenButik.AdministratorButiq
     {
 
         /// <summary>
-        /// rp_supplierList control.
+        /// lv_supplierList control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater rp_supplierList;
+        protected global::System.Web.UI.WebControls.ListView lv_supplierList;
     }
 }

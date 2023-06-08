@@ -5,6 +5,8 @@ VisualStudioVersion = 17.5.33627.172
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KardelenButik", "KardelenButik\KardelenButik.csproj", "{58AEE34E-6269-425B-B336-DC062AC9EF17}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccessLayer", "DataAccessLayer\DataAccessLayer.csproj", "{C3AA6914-07CE-46A2-A6E9-A93C5FA861B6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{58AEE34E-6269-425B-B336-DC062AC9EF17}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{58AEE34E-6269-425B-B336-DC062AC9EF17}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{58AEE34E-6269-425B-B336-DC062AC9EF17}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C3AA6914-07CE-46A2-A6E9-A93C5FA861B6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C3AA6914-07CE-46A2-A6E9-A93C5FA861B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C3AA6914-07CE-46A2-A6E9-A93C5FA861B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C3AA6914-07CE-46A2-A6E9-A93C5FA861B6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
