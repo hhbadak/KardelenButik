@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="OtelKayitModelStoreContainer" CdmEntityContainer="OtelKayitEntities">
+    <EntitySetMapping Name="Kayit">
+      <EntityTypeMapping TypeName="OtelKayitModel.Kayit">
+        <MappingFragment StoreEntitySet="Kayit">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Isim" ColumnName="Isim" />
+          <ScalarProperty Name="Soyisim" ColumnName="Soyisim" />
+          <ScalarProperty Name="TelNo" ColumnName="TelNo" />
+          <ScalarProperty Name="GunSayisi" ColumnName="GunSayisi" />
+          <ScalarProperty Name="OdaNoID" ColumnName="OdaNoID" />
+          <ScalarProperty Name="GirisTarihi" ColumnName="GirisTarihi" />
+          <ScalarProperty Name="ToplamFiyat" ColumnName="ToplamFiyat" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OdaNo">
+      <EntityTypeMapping TypeName="OtelKayitModel.OdaNo">
+        <MappingFragment StoreEntitySet="OdaNo">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="OdaNo1" ColumnName="OdaNo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

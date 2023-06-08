@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="OtelKayitModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Kayit">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Isim" Type="nvarchar" MaxLength="50" />
+    <Property Name="Soyisim" Type="nvarchar" MaxLength="30" />
+    <Property Name="TelNo" Type="nvarchar" MaxLength="15" />
+    <Property Name="GunSayisi" Type="int" />
+    <Property Name="OdaNoID" Type="int" />
+    <Property Name="GirisTarihi" Type="datetime" />
+    <Property Name="ToplamFiyat" Type="decimal" Precision="18" Scale="2" />
+  </EntityType>
+  <EntityType Name="OdaNo">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="OdaNo" Type="nvarchar" MaxLength="4" />
+  </EntityType>
+  <Association Name="fk_kayitOdaNoID">
+    <End Role="OdaNo" Type="Self.OdaNo" Multiplicity="0..1" />
+    <End Role="Kayit" Type="Self.Kayit" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="OdaNo">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Kayit">
+        <PropertyRef Name="OdaNoID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="OtelKayitModelStoreContainer">
+    <EntitySet Name="Kayit" EntityType="Self.Kayit" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="OdaNo" EntityType="Self.OdaNo" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="fk_kayitOdaNoID" Association="Self.fk_kayitOdaNoID">
+      <End Role="OdaNo" EntitySet="OdaNo" />
+      <End Role="Kayit" EntitySet="Kayit" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

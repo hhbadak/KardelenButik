@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="OtelKayitModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Kayit">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Isim" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Soyisim" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="TelNo" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="GunSayisi" Type="Int32" />
+    <Property Name="OdaNoID" Type="Int32" />
+    <Property Name="GirisTarihi" Type="DateTime" Precision="3" />
+    <Property Name="ToplamFiyat" Type="Decimal" Precision="18" Scale="2" />
+    <NavigationProperty Name="OdaNo" Relationship="Self.fk_kayitOdaNoID" FromRole="Kayit" ToRole="OdaNo" />
+  </EntityType>
+  <EntityType Name="OdaNo">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OdaNo1" Type="String" MaxLength="4" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Kayit" Relationship="Self.fk_kayitOdaNoID" FromRole="OdaNo" ToRole="Kayit" />
+  </EntityType>
+  <Association Name="fk_kayitOdaNoID">
+    <End Role="OdaNo" Type="Self.OdaNo" Multiplicity="0..1" />
+    <End Role="Kayit" Type="Self.Kayit" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="OdaNo">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Kayit">
+        <PropertyRef Name="OdaNoID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="OtelKayitEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Kayit" EntityType="Self.Kayit" />
+    <EntitySet Name="OdaNo" EntityType="Self.OdaNo" />
+    <AssociationSet Name="fk_kayitOdaNoID" Association="Self.fk_kayitOdaNoID">
+      <End Role="OdaNo" EntitySet="OdaNo" />
+      <End Role="Kayit" EntitySet="Kayit" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
