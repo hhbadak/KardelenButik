@@ -18,6 +18,8 @@ namespace DataAccessLayer
         public decimal salePrice { get; set; }
         public int stock { get; set; }
         public int reorderLevel { get; set; }
+        public string image { get; set; }
         public bool status { get; set; }
+        public string statusString { get; set; }
     }
 }

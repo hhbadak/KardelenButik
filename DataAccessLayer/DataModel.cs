@@ -50,7 +50,7 @@ namespace DataAccessLayer
             List<Cafeteria> c = new List<Cafeteria>();
             try
             {
-                cmd.CommandText = "SELECT * FROM cafeteriaList";
+                cmd.CommandText = "SELECT * FROM productList";
                 cmd.Parameters.Clear();
                 con.Open();
                 SqlDataReader reader = cmd.ExecuteReader();
@@ -65,7 +65,9 @@ namespace DataAccessLayer
                     model.salePrice = reader.GetDecimal(5);
                     model.stock = reader.GetInt32(6);
                     model.reorderLevel = reader.GetInt32(7);
-                    model.status = reader.GetBoolean(8);
+                    model.image = reader.GetString(8);
+                    model.status = reader.GetBoolean(9);
+                    model.statusString = reader.GetBoolean(9) ? "<label style='color:green'>Aktif</label>" : "<label style='color:Red'>Pasif</label>";
                     c.Add(model);
                 }
                 return c;
@@ -81,7 +83,7 @@ namespace DataAccessLayer
             try
             {
                 List<Categories> c = new List<Categories>();
-                cmd.CommandText = "SELECT * FROM categoriesList";
+                cmd.CommandText = "SELECT * FROM categoryList";
                 cmd.Parameters.Clear();
                 con.Open();
                 SqlDataReader reader = cmd.ExecuteReader();
@@ -113,7 +115,7 @@ namespace DataAccessLayer
                 while (reader.Read())
                 {
                     CustomerDetails model = new CustomerDetails();
-                    model.customerID = reader.GetInt32(0);
+                    model.customerDetailsID = reader.GetInt32(0);
                     model.customer = reader.GetString(1);
                     model.product = reader.GetString(2);
                     model.quantity = reader.GetInt16(3);
@@ -173,7 +175,8 @@ namespace DataAccessLayer
                     model.numberOfBeds = reader.GetByte(1);
                     model.features = reader.GetString(2);
                     model.empty = reader.GetBoolean(3);
-                    model.roomNumber = reader.GetByte(4);
+                    model.price = reader.GetDecimal(4);
+                    model.roomNumber = reader.GetInt16(5);
                     r.Add(model);
                 }
                 return r;

@@ -12,6 +12,7 @@ namespace DataAccessLayer
         public byte numberOfBeds { get; set; }
         public string features { get; set; }
         public bool empty { get; set; }
+        public decimal price { get; set; }
         public Int16 roomNumber { get; set; }
     }
 }

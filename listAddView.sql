@@ -31,5 +31,5 @@ SELECT * FROM customerList
 
 CREATE VIEW roomList
 AS 
-SELECT r.RoomID, r.NumberOfBeds, r.Features, r.Empty, r.RoomNumber FROM Rooms AS r
+SELECT r.RoomID, r.NumberOfBeds, r.Features, r.Empty, r.Price, r.RoomNumber FROM Rooms AS r
 SELECT * FROM roomList

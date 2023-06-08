@@ -3,11 +3,10 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-
     <div class="container" style="margin-top: 100px">
         <asp:ListView ID="lv_supplierList" runat="server">
             <LayoutTemplate>
-                <table class="table table-dark table-hover mt-5">
+                <table class="table table-light table-hover mt-5">
                     <tr>
                         <td>Tedarikçi ID</td>
                         <td>Tedarikçi Adı</td>

@@ -75,6 +75,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="AdministratorButiq\AddProduct.aspx" />
     <Content Include="AdministratorButiq\AdminPanelButiq.aspx" />
     <Content Include="AdministratorButiq\Cafeteria.aspx" />
     <Content Include="AdministratorButiq\Categories.aspx" />
@@ -4814,6 +4815,17 @@
     <Content Include="Assets\Assets\JQuery\css\Slider.css" />
     <Content Include="Assets\Assets\JQuery\scripts\dene.js" />
     <Content Include="Assets\Assets\JQuery\scripts\jquery-3.6.4.min.js" />
+    <Content Include="Assets\Image\addProduct.jpg" />
+    <Content Include="Assets\Image\ayran.jpg" />
+    <Content Include="Assets\Image\cheddarCheese.jpg" />
+    <Content Include="Assets\Image\chickenCutlet.jpg" />
+    <Content Include="Assets\Image\chickenThigh.jpg" />
+    <Content Include="Assets\Image\fetaCheeze.jpg" />
+    <Content Include="Assets\Image\kefir.jpg" />
+    <Content Include="Assets\Image\Milk.jpg" />
+    <Content Include="Assets\Image\smokedChicken.jpg" />
+    <Content Include="Assets\Image\smokedTurkey.jpg" />
+    <Content Include="Assets\Image\yogurt.jpg" />
     <Content Include="Assets\Logo\logo 32x32.png" />
     <Content Include="Assets\Logo\logo.png" />
     <Content Include="KardelenButiq.Context.tt">
@@ -4829,6 +4841,13 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdministratorButiq\AddProduct.aspx.cs">
+      <DependentUpon>AddProduct.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdministratorButiq\AddProduct.aspx.designer.cs">
+      <DependentUpon>AddProduct.aspx</DependentUpon>
+    </Compile>
     <Compile Include="AdministratorButiq\AdminPanelButiq.aspx.cs">
       <DependentUpon>AdminPanelButiq.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
